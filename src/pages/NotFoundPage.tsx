@@ -1,14 +1,8 @@
-import Container from '@/components/Container';
-import NotFound from '@/components/NotFound';
-import Section from '@/components/Section';
+import NotFound from '@ErrorPageComponents/NotFound';
 import { FC } from 'react';
 
-const NotFoundPage: FC = () => (
-  <Section>
-    <Container>
-      <NotFound />
-    </Container>
-  </Section>
-);
+const NotFoundPage: FC = () => {
+  return <NotFound />;
+};
 
 export default NotFoundPage;

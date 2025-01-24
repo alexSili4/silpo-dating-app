@@ -28,6 +28,11 @@ export default defineConfig({
   resolve: {
     alias: {
       '@': '/src',
+      '@AnimationBlocks': '/src/components/AnimationBlocks',
+      '@GeneralComponents': '/src/components/General',
+      '@ErrorPageComponents': '/src/components/ErrorPage',
+      '@MainPageComponents': '/src/components/MainPage',
+      '@TestPageComponents': '/src/components/TestPage',
     },
   },
 });

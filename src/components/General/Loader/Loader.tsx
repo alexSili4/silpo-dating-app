@@ -1,17 +1,21 @@
-import { ThreeDots } from 'react-loader-spinner';
+import { Hearts } from 'react-loader-spinner';
 
 const Loader = () => (
-  <ThreeDots
+  <Hearts
     height='80'
     width='80'
-    radius='9'
     color='#808080'
-    ariaLabel='three-dots-loading'
+    ariaLabel='hearts-loading'
     wrapperStyle={{
+      position: 'fixed',
+      top: '50%',
+      left: '50%',
       display: 'flex',
       justifyContent: 'center',
       alignItems: 'center',
       flexGrow: '1',
+      translateX: '-50%',
+      translateY: '-50%',
     }}
     visible
   />
