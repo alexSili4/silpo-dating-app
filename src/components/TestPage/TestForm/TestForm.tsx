@@ -2,7 +2,7 @@ import { FC } from 'react';
 import { IProps } from './TestForm.types';
 import { Form } from './TestForm.styled';
 import Question from '@TestPageComponents/Question';
-import { useForm } from 'react-hook-form';
+import { SubmitHandler, useForm } from 'react-hook-form';
 
 const TestForm: FC<IProps> = ({
   questions,
@@ -12,13 +12,15 @@ const TestForm: FC<IProps> = ({
 }) => {
   const { register, handleSubmit } = useForm();
 
-  const onTestFormSubmit = (data) => {
+  const handleTestFormSubmit: SubmitHandler<ITestFormData> = async (data) => {
     console.log(data);
   };
 
   const onQuestionRadioBtnChange = () => {
     if (isLastStep) {
-      handleSubmit(onTestFormSubmit)();
+      const onTestFormSubmit = handleSubmit(handleTestFormSubmit);
+
+      onTestFormSubmit();
     } else {
       incrementCurrentStep();
     }
