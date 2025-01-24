@@ -17,9 +17,6 @@ export const Container = styled.div`
   flex-direction: column;
   justify-content: space-between;
   gap: ${({ theme }) => theme.spacing(2)}px;
-  min-height: 100%;
-  padding-left: ${({ theme }) => theme.spacing(25)}px;
-  padding-right: ${({ theme }) => theme.spacing(25)}px;
 `;
 
 export const InfoWrap = styled.div`

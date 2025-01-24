@@ -1,8 +1,9 @@
 import { FC } from 'react';
 import { IProps } from './TestForm.types';
 import { Form } from './TestForm.styled';
-import Question from '@TestPageComponents/Question';
 import { SubmitHandler, useForm } from 'react-hook-form';
+import { InputChangeEvent, IStrings } from '@/types/types';
+import AnimatedQuestion from '@AnimationBlocks/AnimatedQuestion';
 
 const TestForm: FC<IProps> = ({
   questions,
@@ -10,19 +11,20 @@ const TestForm: FC<IProps> = ({
   isLastStep,
   incrementCurrentStep,
 }) => {
-  const { register, handleSubmit } = useForm();
+  const { register, handleSubmit, setValue } = useForm<IStrings>();
 
-  const handleTestFormSubmit: SubmitHandler<ITestFormData> = async (data) => {
+  const handleTestFormSubmit: SubmitHandler<IStrings> = async (data) => {
     console.log(data);
   };
 
-  const onQuestionRadioBtnChange = () => {
-    if (isLastStep) {
-      const onTestFormSubmit = handleSubmit(handleTestFormSubmit);
+  const onQuestionRadioBtnChange = (e: InputChangeEvent) => {
+    const { name, value } = e.currentTarget;
+    setValue(name, value);
 
-      onTestFormSubmit();
-    } else {
+    if (!isLastStep) {
       incrementCurrentStep();
+    } else {
+      handleSubmit(handleTestFormSubmit)();
     }
   };
 
@@ -30,18 +32,19 @@ const TestForm: FC<IProps> = ({
     <Form>
       {questions.map(({ answers, title, name }, index) => {
         const shouldShowQuestion = index <= currentStep;
+        const isFirstQuestion = index === 0;
 
         return (
-          shouldShowQuestion && (
-            <Question
-              answers={answers}
-              title={title}
-              key={name}
-              zIndex={index}
-              settings={register(name, { required: true })}
-              onChange={onQuestionRadioBtnChange}
-            />
-          )
+          <AnimatedQuestion
+            shouldShow={shouldShowQuestion}
+            answers={answers}
+            title={title}
+            key={name}
+            zIndex={index}
+            isFirstQuestion={isFirstQuestion}
+            settings={register(name, { required: true })}
+            onChange={onQuestionRadioBtnChange}
+          />
         );
       })}
     </Form>

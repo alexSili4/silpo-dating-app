@@ -11,4 +11,8 @@ export type InputChangeFunc = (e: InputChangeEvent) => void;
 // other
 export type Strings = string[];
 
+export interface IStrings {
+  [key: string]: string;
+}
+
 export type AnyElements = any[];

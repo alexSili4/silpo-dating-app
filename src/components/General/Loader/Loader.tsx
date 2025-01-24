@@ -2,9 +2,9 @@ import { Hearts } from 'react-loader-spinner';
 
 const Loader = () => (
   <Hearts
-    height='80'
-    width='80'
-    color='#808080'
+    height='300'
+    width='300'
+    color='#F994BD '
     ariaLabel='hearts-loading'
     wrapperStyle={{
       position: 'fixed',
@@ -14,8 +14,7 @@ const Loader = () => (
       justifyContent: 'center',
       alignItems: 'center',
       flexGrow: '1',
-      translateX: '-50%',
-      translateY: '-50%',
+      transform: 'translateX(-50%) translateY(-50%)',
     }}
     visible
   />

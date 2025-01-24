@@ -1,9 +1,10 @@
 import { Questions } from '@/types/questions.types';
+import QuestionsKeys from './questionsKeys';
 
 const questions: Questions = [
   {
     title: 'Що для вас любов з першого погляду?',
-    name: 'loveAtFirstSight',
+    name: QuestionsKeys.loveAtFirstSight,
     answers: [
       {
         title:
@@ -19,7 +20,7 @@ const questions: Questions = [
   },
   {
     title: 'Як натякнути вам про свої почуття?',
-    name: 'howToHintAboutFeelings',
+    name: QuestionsKeys.howToHintAboutFeelings,
     answers: [
       { title: 'Коробочкою карамельних та фруктових макаронів', image: '' },
       { title: 'Теплими варениками з картоплею із кулінарії', image: '' },
@@ -27,7 +28,7 @@ const questions: Questions = [
   },
   {
     title: 'Що перекусите перед побаченням?',
-    name: 'whatToSnackBeforeDate',
+    name: QuestionsKeys.whatToSnackBeforeDate,
     answers: [
       {
         title: 'Зроблю два бутерброди з хрустким часниковим багетом «Крафтяр»',

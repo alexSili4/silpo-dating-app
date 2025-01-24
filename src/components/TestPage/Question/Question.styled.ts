@@ -1,7 +1,9 @@
 import styled from '@emotion/styled';
-import { IStyledContainerProps } from './Question.types';
 
-export const Container = styled.div<IStyledContainerProps>``;
+export const Container = styled.div`
+  width: 100%;
+  height: 100%;
+`;
 
 export const TitleWrap = styled.div``;
 
