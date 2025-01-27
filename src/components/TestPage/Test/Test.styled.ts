@@ -13,4 +13,5 @@ export const Container = styled.div`
   position: relative;
   display: flex;
   height: 100%;
+  padding-bottom: ${({ theme }) => theme.spacing(20)}px;
 `;

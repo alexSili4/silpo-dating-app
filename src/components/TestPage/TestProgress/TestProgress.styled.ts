@@ -13,7 +13,7 @@ export const Container = styled.div<IStyledContainerProps>`
 
 export const List = styled.ul`
   display: flex;
-  gap: ${({ theme }) => theme.spacing(3)};
+  gap: ${({ theme }) => theme.spacing(3)}px;
 `;
 
 export const ListItem = styled.li``;

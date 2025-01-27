@@ -15,15 +15,13 @@ const Test: FC<IProps> = ({
     <Section>
       <GeneralContainer>
         <Container>
-       
-            <TestForm
-              questions={questions}
-              currentStep={currentStep}
-              isLastStep={isLastStep}
-              incrementCurrentStep={incrementCurrentStep}
-            />
-            <TestProgress questions={questions} currentStep={currentStep} />
-   
+          <TestForm
+            questions={questions}
+            currentStep={currentStep}
+            isLastStep={isLastStep}
+            incrementCurrentStep={incrementCurrentStep}
+          />
+          <TestProgress questions={questions} currentStep={currentStep} />
         </Container>
       </GeneralContainer>
     </Section>

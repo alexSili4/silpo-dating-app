@@ -6,3 +6,7 @@ export interface IProps {
   settings: object;
   onChange: InputChangeFunc;
 }
+
+export interface IStyledContainerProps {
+  answers: number;
+}

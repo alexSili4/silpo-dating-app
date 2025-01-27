@@ -1,10 +1,9 @@
 import { Questions } from '@/types/questions.types';
-import QuestionsKeys from './questionsKeys';
 
 const questions: Questions = [
   {
     title: 'Що для вас любов з першого погляду?',
-    name: QuestionsKeys.loveAtFirstSight,
+    name: 'loveAtFirstSight',
     answers: [
       {
         title:
@@ -20,7 +19,7 @@ const questions: Questions = [
   },
   {
     title: 'Як натякнути вам про свої почуття?',
-    name: QuestionsKeys.howToHintAboutFeelings,
+    name: 'howToHintAboutFeelings',
     answers: [
       { title: 'Коробочкою карамельних та фруктових макаронів', image: '' },
       { title: 'Теплими варениками з картоплею із кулінарії', image: '' },
@@ -28,7 +27,7 @@ const questions: Questions = [
   },
   {
     title: 'Що перекусите перед побаченням?',
-    name: QuestionsKeys.whatToSnackBeforeDate,
+    name: 'whatToSnackBeforeDate',
     answers: [
       {
         title: 'Зроблю два бутерброди з хрустким часниковим багетом «Крафтяр»',
@@ -36,6 +35,63 @@ const questions: Questions = [
       },
       {
         title: 'Їсти не буду, випʼю комбучі й побіжу',
+        image: '',
+      },
+    ],
+  },
+  {
+    title: 'З яким десертом у вас абсолютний match?',
+    name: 'favoriteDessert',
+    answers: [
+      {
+        title: 'Повітряний та ніжний «Тирамісу» з маскарпоне',
+        image: '',
+      },
+      {
+        title: 'Десертний салат із соковитим манго',
+        image: '',
+      },
+    ],
+  },
+  {
+    title: 'Вас запросили на романтичну вечерю. Що приготувати?',
+    name: 'dishForRomanticDinner',
+    answers: [
+      {
+        title: 'Пасту з коктейльними томатами і королівськими печерицями',
+        image: '',
+      },
+      {
+        title: 'Апетитні пельмешки «Премія» зі сметанкою',
+        image: '',
+      },
+    ],
+  },
+  {
+    title: 'Яке побачення врятує настрій у сірий та дощовий день?',
+    name: 'rainyDayDate',
+    answers: [
+      {
+        title: 'Настільні ігри та солоні фісташки й рифлені чипси',
+        image: '',
+      },
+      {
+        title:
+          'Романтична комедія та сметанковий сир і солоденький свіжий ананас',
+        image: '',
+      },
+    ],
+  },
+  {
+    title: 'пакет потрібен?',
+    name: 'isBagNeeded',
+    answers: [
+      {
+        title: 'Так, але наступного разу буду зі своїм',
+        image: '',
+      },
+      {
+        title: 'Ні, у мене завжди з собою є торбинка',
         image: '',
       },
     ],
